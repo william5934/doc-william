@@ -22,11 +22,9 @@ flush privileges
 - Afficher le contenu d'une table (console sql)
 ```sql
 select * from Visiteur;
-;
 ```
 
 - Utilisé une base (console sql)
 ```sql
 Use gsb_valide;
-;
 ```
