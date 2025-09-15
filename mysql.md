@@ -9,7 +9,7 @@ create database gsb_valide;
 create user 'userGsb'@'localhost' identified by 'secret';
 ```
 
-- Créer un nouvel utilisateur (console bash)
+- importer un fichier .sql (console bash)
 ```bash
 mysql gsb_valide < nom_fichier.sql
 ```
