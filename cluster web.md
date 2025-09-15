@@ -24,3 +24,23 @@ crm configure property stonith-enabled=false
 crm status
 crm configure show
 ```
+
+- Désactiver le corum
+```bash
+crm configure property no-quorum-policy="ignore".
+```
+
+- Attribuer l'adresse ip virtuel
+```bash
+crm configure primitive IPFailover ocf:heartbeat:IPaddr2 params ip=172.16.0.12 cidr_netmask=24 nic=ens33 iflabel=VIP
+```
+
+- Désactivier un noeud de force
+```bash
+sudo crm node standby
+```
+
+- Réactiver un noeud
+```bash
+sudo crm node online
+```
