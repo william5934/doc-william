@@ -33,3 +33,13 @@ Use gsb_valide;
 ```sql
 update gsb_valide.Visiteur set mdp ='toto' where login='agest';
 ```
+
+- Créer ressource mysql pour réplication avec corosync
+```bash
+crm configure primitive serviceMySQL ocf:heartbeat:mysql params socket=/var/run/mysqld/mysqld.sock
+```
+
+- Créer un groupe clone master to master corosync
+```bash
+crm configure clone cServiceMySQL serviceMySQL
+```
