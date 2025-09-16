@@ -74,3 +74,4 @@ sudo mysql
 ```sql
 show slave status;
 ```
+

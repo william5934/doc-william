@@ -28,3 +28,8 @@ select * from Visiteur;
 ```sql
 Use gsb_valide;
 ```
+
+- Modifier un champs dans une table sql
+```sql
+update gsb_valide.Visiteur set mdp ='toto' where login='agest';
+```
