@@ -75,3 +75,19 @@ sudo mysql
 show slave status;
 ```
 
+### Réplication bi-directionel (maitre to maitre)
+
+- modification du fichier config mysql web1
+```bash
+sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+```
+- Config fichier serv-web1
+1. Rajouter la ligne **log-slave-updates**
+2. Rajouter la ligne **master-retry-count = 20**
+3. Rajouter la ligne **replicate-do-db = gsb_valide**
+
+- Config fichier serv-web2
+1. Décommentez la ligne **bind-address**
+2. Décommentez la ligne **log_bin**
+3. Rajouter la ligne **binlog_do_db = gsb_valide**
+4. Rajouter la ligne **log-slave-updates**
