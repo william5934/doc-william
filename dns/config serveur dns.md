@@ -1,6 +1,7 @@
 # Fichier config bind9 (/etc/bind/)
 - named.conf.local = fichier pour définir des zones
 1. Déclaration d'une zone sur un serveur maitre
+``` bash
 zone "sodecaf.fr" {
         type master;
         file "db.sodecaf.fr";
@@ -26,3 +27,7 @@ srv-web2        IN      A       172.16.0.11
 www             IN      A       172.16.0.12
 web1            IN      CNAME   srv-web1.sodecaf.fr.
 web2            IN      CNAME   srv-web2.sodecaf.fr.
+```
+
+# Commande nslookup
+- nslookup {nom à tester} {ip du serveur dns}
