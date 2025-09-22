@@ -1,13 +1,17 @@
 # Fichier config bind9 (/etc/bind/)
 - named.conf.local = fichier pour définir des zones
-1. Déclaration d'une zone sur un serveur maitre
+
+# Déclaration d'une zone sur un serveur maitre
 ```bash
 zone "sodecaf.fr" {
         type master;
         file "db.sodecaf.fr";
+        allow-transfer {172.16.0.4;};
 };
+```
 
-- /var/cache/bind/db.sodecaf.fr (fichier de zone)
+# /var/cache/bind/db.sodecaf.fr (fichier de zone)
+```bash
 $TTL 86400
 @       IN      SOA     srv-dns1.sodecaf.fr. hostmaster.sodecaf.fr. (
 
@@ -28,11 +32,27 @@ www             IN      A       172.16.0.12
 web1            IN      CNAME   srv-web1.sodecaf.fr.
 web2            IN      CNAME   srv-web2.sodecaf.fr.
 ```
+
 # Zone dns reverse
 ```bash
 zone "0.16.172.in-addr.arpa" {
-type master;
-file "db.172.16.0.rev";
+    type master;
+    file "db.172.16.0.rev";
+    allow-transfer {172.16.0.4;};
+};
+```
+# named.conf.local (dns secondaire)
+```bash
+zone "sodecaf.fr" {
+        type slave;
+        file "slave/db.sodecaf.fr";
+        masters {172.16.0.3;};
+};
+
+zone "0.16.172.in-addr.arpa" {
+        type slave;
+        file "slave/db.172.16.0.rev";
+         masters {172.16.0.3;};
 };
 ```
 
