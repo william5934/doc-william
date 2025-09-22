@@ -1,7 +1,7 @@
 # Fichier config bind9 (/etc/bind/)
 - named.conf.local = fichier pour définir des zones
 1. Déclaration d'une zone sur un serveur maitre
-``` bash
+```bash
 zone "sodecaf.fr" {
         type master;
         file "db.sodecaf.fr";
