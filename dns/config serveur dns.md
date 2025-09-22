@@ -28,6 +28,13 @@ www             IN      A       172.16.0.12
 web1            IN      CNAME   srv-web1.sodecaf.fr.
 web2            IN      CNAME   srv-web2.sodecaf.fr.
 ```
+# Zone dns reverse
+```bash
+zone "0.16.172.in-addr.arpa" {
+type master;
+file "db.172.16.0.rev";
+};
+```
 
 # Commande nslookup
 - nslookup {nom à tester} {ip du serveur dns}
