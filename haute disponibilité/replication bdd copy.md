@@ -64,14 +64,39 @@ sudo mysql
 ```sql
 flush tables with read lock;
 ```
-
-# Création d'un utilisateur réplicateur
-- Créer un compte réplicateur
+# Récupérer les info du master
+```bash
+sudo mysql
+```
 ```sql
-create user 'replicateur'@'%' identified by 'Btssio2017';
+show master status;
+```
+- Récupérer le **file** (ex : mysql-bin.000001) et la **Position** (ex : 3921)
+
+### Sur la machine slave
+# Configuration de mysql pour se connecter au master
+```bash
+sudo mysql
+```
+```sql
+change master to master_host='ip du master', master_user='replicateur', master_password='Btssio2017', master_log_file='mysql-bin.000002', master_log_pos=328;
+```
+### Sur le serveur maitre
+# Dévérouillage des tables
+```bash
+sudo mysql
+```
+```sql
+unlock tables;
 ```
 
-# Donner tout les droit au compte réplicateur
+### Sur la machine slave
+# Vérifier le status de l'esclave
+```bash
+sudo mysql
+```
 ```sql
-grant replication slave on *.* to 'replicateur'@'%';
-``
+show slave status \G;
+```
+- Vous devez voir s'afficher **Waiting for master to send evant** a l'onglet **Slave_IO_State**
+
