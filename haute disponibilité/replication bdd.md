@@ -24,7 +24,7 @@ unlock tables;
 create user 'replicateur'@'%' identified by 'Btssio2017';
 ```
 
--  onner tout les droit au compte réplicateur
+- Donner tout les droit au compte réplicateur
 ```sql
 grant replication slave on *.* to 'replicateur'@'%';
 ```

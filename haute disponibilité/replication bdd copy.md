@@ -71,3 +71,7 @@ flush tables with read lock;
 create user 'replicateur'@'%' identified by 'Btssio2017';
 ```
 
+# Donner tout les droit au compte réplicateur
+```sql
+grant replication slave on *.* to 'replicateur'@'%';
+``
