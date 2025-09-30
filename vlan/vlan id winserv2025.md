@@ -1,4 +1,4 @@
-1. Entrez driver windows serveur 2025
+1. Entrez **driver windows serveur 2025** sur votre navigateur
 2. Cliquez sur Pilote de carte réseau Intel pour windows server 2025
 3. Télécharger le driver itel et extraier l'archive
 3. Allez dans la propriété de la carte
