@@ -56,7 +56,7 @@ sudo systemctl restart mariadb.service
 ```bash
 systemctl status mariadb.service
 ```
-# Création de l'utilisateur pour la réplication
+# Création de l'utilisateur pour la réplication (sur les 2 machines)
 ```sql
 create user 'replicateur'@'%' identified by 'Btssio2017';
 ```
