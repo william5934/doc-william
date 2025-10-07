@@ -32,7 +32,7 @@ systemctl status mariadb.service
 # Modifier le fichier de config 50-server.cnf
 ```bash
 cp /etc/mysql/mariadb.conf.d/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf.sav
-sudo nano /tc/mysql/maridb.conf.d/50-srvr.cnf
+sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
 ```
 - Modifier les option suivante
 ```bash
