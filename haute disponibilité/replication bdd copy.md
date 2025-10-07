@@ -1,7 +1,7 @@
 ### Sur le serveur maitre
 # Modifier le fichier de config 50-server.cnf
 ```bash
-cp /etc/mysql/maridb.conf.d/50-srvr.cnf /etc/mysql/maridb.conf.d/50-srvr.cnf.sav
+cp /etc/mysql/mariadb.conf.d/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf.sav
 sudo nano /tc/mysql/maridb.conf.d/50-srvr.cnf
 ```
 - Modifier les option suivante
@@ -31,7 +31,7 @@ systemctl status mariadb.service
 ### Sur le serveur esclave
 # Modifier le fichier de config 50-server.cnf
 ```bash
-cp /tc/mysql/maridb.conf.d/50-srvr.cnf /tc/mysql/maridb.conf.d/50-srvr.cnf.sav
+cp /etc/mysql/mariadb.conf.d/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf.sav
 sudo nano /tc/mysql/maridb.conf.d/50-srvr.cnf
 ```
 - Modifier les option suivante
