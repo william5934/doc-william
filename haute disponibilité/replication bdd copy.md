@@ -17,7 +17,6 @@ binlog_do_db = <nom de la base de données>
 # Créer le dossier d'erreur mysql et définir les permissions
 ```bash
 sudo mkdir -m 2750 /var/log/mysql
-sudo chown -R mysql:root mysql/
 ```
 
 # Redémarrer le service mysql
