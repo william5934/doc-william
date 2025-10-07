@@ -1,7 +1,7 @@
 ### Sur le serveur maitre
 # Modifier le fichier de config 50-server.cnf
 ```bash
-cp /etc/mysql/mariadb.conf.d/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf.sav
+sudo cp /etc/mysql/mariadb.conf.d/50-server.cnf /etc/mysql/mariadb.conf.d/50-server.cnf.sav
 sudo nano /tc/mysql/maridb.conf.d/50-srvr.cnf
 ```
 - Modifier les option suivante
