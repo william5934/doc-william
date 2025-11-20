@@ -10,5 +10,26 @@ msfconsole
 
 - Cherche des modules avec des mot préçis
 ```bash
-search mysql
+search <module>
 ``` 
+
+- Permet de voir les info d'un modules
+```bash
+info <chemin_vers_le_module>
+```
+
+- Recherche de service / port sur une machine
+```bash
+nmap -sV <ip>
+```
+
+- Utiliser un exploit
+```bash
+use <id de l'exploit>
+```
+
+- Définir une variable de l'exploit
+```bash
+set <variable> <valeur>
+```
+
