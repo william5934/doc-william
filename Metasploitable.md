@@ -39,3 +39,9 @@ set <variable> <valeur>
 
 - search samba <version_samba>
 
+- Voir les page web d'un site 
+dirb http://<ip ou nom de domaine>
+
+- Voir les vulnérabilité d'un module pour une certaine année
+search <module> cve:<année>
+
