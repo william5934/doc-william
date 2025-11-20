@@ -33,3 +33,9 @@ use <id de l'exploit>
 set <variable> <valeur>
 ```
 
+## Attaque sur serveur samba
+
+- use auxiliary/scanner/smb/smb_version
+
+- search samba <version_samba>
+
