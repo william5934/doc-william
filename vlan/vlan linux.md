@@ -21,3 +21,27 @@ lsmod | grep 8021q
 garp                   16384  1 8021q
 mrp                    20480  1 8021q
 ```
+# Config fichier /etc/network/interfaces
+```bash
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+allow-hotplug ens32
+iface ens32 inet manual
+
+# Interface vlan 100
+auto ens32.100
+iface ens32.100 inet static
+        address 192.168.100.9/24
+        gateway 192.168.100.254
+        dns-search galaxy-swiss.local
+        dns-nameservers 192.168.100.1 192.168.100.2
+        vlan-raw-device ens32
+```
