@@ -1,6 +1,6 @@
 # Installation vlan
 ```bash
-apt-get update
+apt-get update -y
 apt-get upgrade -y
 apt-get install vlan
 ```
