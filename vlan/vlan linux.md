@@ -8,7 +8,7 @@ apt-get install vlan
 # Activation du module
 ```bash
 echo "8021q" | sudo tee -a /etc/modules
-modprobe 8021q
+sudo modprobe 8021q
 ```
 
 # Vérification du module
