@@ -31,6 +31,7 @@ mrp                    20480  1 8021q
 sudo nano /etc/netplan/01-netcfg.yaml
 ```
 ## contenue du fichier de configuration
+```bash
 network:
   version: 2
   renderer: networkd
@@ -46,3 +47,4 @@ network:
         addresses:
           - 8.8.8.8
           - 8.8.4.4
+```
