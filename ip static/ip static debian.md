@@ -1,3 +1,4 @@
+```bash
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 
@@ -14,3 +15,4 @@ iface ens33 inet static
         gateway 172.16.0.254
         dns-nameservers 8.8.8.8
         dns-search sodecaf.local
+```
