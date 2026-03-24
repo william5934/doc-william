@@ -43,7 +43,7 @@ auto ens32.100
 iface ens32.100 inet static
         address 192.168.100.9/24
         gateway 192.168.100.254
-        dns-search galaxy-swiss.local
+        dns-search gsb.local
         dns-nameservers 192.168.100.1 192.168.100.2
         vlan-raw-device ens32
 ```
