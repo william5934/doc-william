@@ -6,22 +6,23 @@
 - Activation de OSPF
 ```cisco
 routeur ospf <numéro de processus>
-```
 ex : routeur OSPF 1
+```
 
 - Nom du routeur (optionnel, OSP choisira lui-même le nom si commande non définie)
 ```cisco
 routeur-id <ip ou nom>
+ex : routeur-id 172.16.0.254
 ```
 
 - Déclaration des réseaux connectés au routeur
 ```cisco
 network <ip du réseau> <masque inversé> area <numéro de zone>
-```
 ex : network 172.16.0.0 0.0.255.255 area 0
+```
 
 - Déclaration d'une interface passive
 ```cisco
 passive-interface <interface routeur voulut>
-```
 ex : passive-interface fa0/1
+```
