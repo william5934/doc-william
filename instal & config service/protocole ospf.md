@@ -26,3 +26,13 @@ ex : network 172.16.0.0 0.0.255.255 area 0
 passive-interface <interface routeur voulut>
 ex : passive-interface fa0/1
 ```
+
+- Vérification du voisinage d’un routeur (sortir du mode config)
+```cisco
+show ip ospf neighbor
+```
+
+- Observation des messages OSPF (sortir du mode config)
+```cisco
+Debug ip ospf events
+```
